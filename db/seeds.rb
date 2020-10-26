@@ -8,3 +8,16 @@
 
 pickle = Pizza.create(title: "Pickle Pizza", description: "Pickles on pizza!")
 reuben = Pizza.create(title: "Reuben Pizza", description: "Reuben-style pastrami pizza!")
+
+Topping.create(ingredient_name: "Ranch Dressing", pizza_id: pickle.id)
+Topping.create(ingredient_name: "Garlic", pizza_id: pickle.id)
+Topping.create(ingredient_name: "Dill Pickles", pizza_id: pickle.id)
+Topping.create(ingredient_name: "Mozzarella", pizza_id: pickle.id)
+
+Topping.create(ingredient_name: "Pastrami", pizza_id: reuben.id)
+Topping.create(ingredient_name: "Sauerkraut", pizza_id: reuben.id)
+Topping.create(ingredient_name: "Thousand Island", pizza_id: reuben.id)
+Topping.create(ingredient_name: "Swiss Cheese", pizza_id: reuben.id)
+
+
+
