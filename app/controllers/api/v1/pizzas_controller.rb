@@ -2,7 +2,7 @@ class Api::V1::PizzasController < ApplicationController
 
     def index 
         pizzas = Pizza.all 
-        render json: pizzas, status: 200
+        render json: PizzaSerializer.new(pizzas)
     end 
 
     def show 

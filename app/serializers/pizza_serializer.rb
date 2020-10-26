@@ -1,5 +1,5 @@
-class PizzaSerializer < ActiveModel::Serializer
-  has_many :toppings
-
-  attributes :title, :description
+class PizzaSerializer
+  include FastJsonapi::ObjectSerializer
+  #has_many :toppings
+  attributes :title, :description, :toppings #associated relationship
 end
