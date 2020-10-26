@@ -1,9 +1,23 @@
 class Api::V1::PizzasController < ApplicationController
 
     def index 
-        #we dont need instance variables- because usually we are rendering data in views
-            #get request and returns index of all pizzas in my db in json format
         pizzas = Pizza.all 
         render json: pizzas
+    end 
+
+    def create
+        pizza = Pizza.new(pizza_params)
+        if pizza.save
+            render json: pizza, status: :accepted
+        else 
+            render json: {errors: pizza.errors.full_messages}, status: 
+            :unprocessible_entity
+        end 
+    end 
+
+    private 
+
+    def pizza_params
+        params.require(:pizza).permit(:title, :description)
     end 
 end
