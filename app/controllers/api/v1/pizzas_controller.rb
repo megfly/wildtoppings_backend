@@ -33,6 +33,8 @@ class Api::V1::PizzasController < ApplicationController
     def destroy
         pizza = Pizza.find(params[:id])
         pizza.destroy
+
+        render json: {toppingId: topping.id}
     end 
 
     private 
