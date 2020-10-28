@@ -12,6 +12,7 @@ class Api::V1::PizzasController < ApplicationController
 
     def create
         pizza = Pizza.new(pizza_params)
+        # byebug
         if pizza.save
             render json: pizza, status: :accepted
         else 
