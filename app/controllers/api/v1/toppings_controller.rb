@@ -11,7 +11,7 @@ class Api::V1::ToppingsController < ApplicationController
 
     def create
         pizza = Pizza.find(params[:pizza_id])
-        topping = Pizza.Topping.build(topping_params)
+        topping = Pizza.toppings.build(topping_params)
         if topping.save
             render json: topping, status: :accepted
         else 
