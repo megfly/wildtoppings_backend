@@ -1,7 +1,8 @@
 class Api::V1::ToppingsController < ApplicationController
     def index 
         toppings = Topping.all 
-        render json: toppings, status: 200
+        render json: ToppingSerializer.new(toppings)
+        # render json: toppings, status: 200
     end 
 
     # def show 
@@ -13,7 +14,8 @@ class Api::V1::ToppingsController < ApplicationController
         pizza = Pizza.find(params[:pizza_id])
         topping = Pizza.toppings.build(topping_params)
         if topping.save
-            render json: topping, status: :accepted
+            # render json: topping, status: :accepted
+            render json: ToppingSerializer.new(topping)
         else 
             render json: {errors: topping.errors.full_messages}, status: 
             :unprocessible_entity
