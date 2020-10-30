@@ -1,8 +1,8 @@
 class Api::V1::ToppingsController < ApplicationController
-    # def index 
-    #     toppings = Topping.all 
-    #     render json: toppings, status: 200
-    # end 
+    def index 
+        toppings = Topping.all 
+        render json: toppings, status: 200
+    end 
 
     # def show 
     #     topping = Topping.find(params[:id])
