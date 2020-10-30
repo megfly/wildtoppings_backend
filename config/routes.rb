@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do 
       resources :pizzas, only: [:index, :create, :show, :update, :destroy] do 
         resources :toppings, only: [:create, :destroy] 
+      end 
     end 
   end 
 end
