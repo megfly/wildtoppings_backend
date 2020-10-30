@@ -40,6 +40,6 @@ class Api::V1::ToppingsController < ApplicationController
     private 
 
     def topping_params
-        params.require(:topping).permit(:title, :description)
+        params.require(:topping).permit(:ingredient_name, :pizza_id)
     end 
 end 
