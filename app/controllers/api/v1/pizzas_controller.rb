@@ -41,6 +41,6 @@ class Api::V1::PizzasController < ApplicationController
     private 
 
     def pizza_params
-        params.require(:pizza).permit(:title, :description)
+        params.require(:pizza).permit(:title, :description, :toppings)
     end 
 end
