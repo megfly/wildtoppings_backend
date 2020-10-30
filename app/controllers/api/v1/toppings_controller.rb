@@ -34,7 +34,7 @@ class Api::V1::ToppingsController < ApplicationController
         topping = Topping.find(params[:id])
         topping.destroy
 
-        render json: {pizzaId: pizza.id}
+        render json: {toppingId: topping.id}
     end 
 
     private 
