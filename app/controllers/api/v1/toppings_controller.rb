@@ -36,7 +36,8 @@ class Api::V1::ToppingsController < ApplicationController
         topping = Topping.find(params[:id])
         topping.destroy
 
-        render json: {toppingId: topping.id}
+        render json: ToppingSerializer.new(topping)
+        # render json: {toppingId: topping.id}
     end 
 
     private 

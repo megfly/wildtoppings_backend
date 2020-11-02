@@ -38,7 +38,8 @@ class Api::V1::PizzasController < ApplicationController
         pizza = Pizza.find(params[:id])
         pizza.destroy
 
-        render json: {toppingId: topping.id}
+        render json: PizzaSerializer.new(pizza)
+        # render json: {pizzaId: pizza.id}
     end 
 
     private 
