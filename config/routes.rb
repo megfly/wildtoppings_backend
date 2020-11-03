@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
       resources :pizzas, only: [:index, :create, :show, :update, :destroy] 
-      resources :toppings, only: [:index, :create, :destroy] 
+      resources :toppings, only: [:index, :show, :create, :destroy] 
        
     end 
   end 
