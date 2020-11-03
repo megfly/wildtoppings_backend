@@ -12,8 +12,8 @@ class Api::V1::ToppingsController < ApplicationController
 
     def create
         # 
-        # pizza = Pizza.find(params[:pizza_id])
-byebug
+        pizza = Pizza.find(params[:pizza_id])
+# byebug
         topping = Topping.new
         # byebug
         if topping.save
