@@ -5,14 +5,17 @@ class Api::V1::ToppingsController < ApplicationController
         # render json: toppings, status: 200
     end 
 
-    # def show 
-    #     topping = Topping.find(params[:id])
-    #     render json: topping, status: 200
-    # end 
+    def show 
+        topping = Topping.find(params[:id])
+        render json: topping, status: 200
+    end 
 
     def create
-        pizza = Pizza.find(params[:pizza_id])
-        topping = Pizza.toppings.build(topping_params)
+        # 
+        # pizza = Pizza.find(params[:pizza_id])
+byebug
+        topping = Topping.new
+        # byebug
         if topping.save
             # render json: topping, status: :accepted
             render json: ToppingSerializer.new(topping)
