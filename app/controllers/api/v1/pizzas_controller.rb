@@ -13,7 +13,7 @@ class Api::V1::PizzasController < ApplicationController
 
     def create
         pizza = Pizza.new(pizza_params)
-        # byebug
+    byebug
         if pizza.save
             # render json: pizza, status: :accepted
             render json: PizzaSerializer.new(pizza)
