@@ -11,11 +11,9 @@ class Api::V1::ToppingsController < ApplicationController
     end 
 
     def create
-        # 
         pizza = Pizza.find(params[:pizza_id])
-# byebug
-        topping = Topping.new
-        # byebug
+        topping = Topping.new(topping_params)
+    # byebug
         if topping.save
             # render json: topping, status: :accepted
             render json: ToppingSerializer.new(topping)
