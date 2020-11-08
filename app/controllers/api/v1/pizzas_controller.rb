@@ -34,14 +34,6 @@ class Api::V1::PizzasController < ApplicationController
         end 
     end 
 
-    def destroy
-        pizza = Pizza.find(params[:id])
-        pizza.destroy
-
-        render json: PizzaSerializer.new(pizza)
-        # render json: {pizzaId: pizza.id}
-    end 
-
     private 
 
     def pizza_params
