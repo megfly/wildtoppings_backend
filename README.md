@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was built for Flatiron school as the module 4 Javascript and Ruby on Rails project. It is a single page application that uses Ruby on Rails for teh backend and Javascript for the frontend.
 
-Things you may want to cover:
+# Overview
 
-* Ruby version
+WildToppings is an app for pizza lovers to keep track of all the wild pizza's they've eaten! The pizza lover can create a pizza with a name & description, and edit the name & description. The pizza lover can also add toppings to pizzas and delete those toppings.
 
-* System dependencies
+# Instructions
 
-* Configuration
+Fork and clone
+CD into wildtoppings_backend
+bundle install
+rails db:migrate
+rails s
+then CD into wildtoppings_frontend
+open index.html
 
-* Database creation
 
-* Database initialization
+Contributor's Guide: https://www.contributor-covenant.org/
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+License: https://opensource.org/licenses/MIT
